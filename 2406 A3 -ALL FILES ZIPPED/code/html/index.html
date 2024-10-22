@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <span class="own_message"></span>
+      <span class="public_message"></span>
+      <span class="private_message"></span>
+      <style>
+         body {
+            background: #dddddd;
+         }
+
+		 /*element selectors: */
+      .own_message{
+        white-space: pre;
+        font-size: large;
+        font-weight: bold;
+        font-family: "Courier", Monospace;
+        color: rgb(0, 0, 128);
+      }
+      .public_message{
+        white-space: pre;
+        font-size: large;
+        font-weight: bold;
+        font-family: "Courier", Monospace;
+        color: rgb(0, 0, 0);
+      }
+      .private_message{
+        white-space: pre;
+        font-size: large;
+        font-weight: bold;
+        font-family: "Courier", Monospace;
+        color: rgb(128, 0, 0);
+      }
+         /*id selectors: */
+      </style>
+   </head>
+
+  <body>
+    <br>
+    <input type = "text"  id="userTextFieldConnect" name = "userTextFieldConnect"  value="" size = "60" />
+    <input type="button" id="connect_as" value="Connect as">
+    <div id="text-areaConnect"></div>
+
+    <input type = "text"  id="userTextFieldSend" name = "userTextFieldSend"  value="" size = "60" />
+    <input type="button" id="send_button" value="Send">
+    <input type="button" id="clear_button" value="Clear">
+    <div id="text-areaSend"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='messagesFunctions.js'></script>
+    <script src='keyboardAndButtonHandlers.js'></script>
+    <script src='eventListeners.js'></script>
+  </body>
+</html>
